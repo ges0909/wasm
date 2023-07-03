@@ -3,6 +3,7 @@ from spin_http import Request, Response
 from json import dumps
 
 def handle_request(request: Request) -> Response:
+    # print("'handle_request' called")
     stock = [
     {
         "name": "Laptop",

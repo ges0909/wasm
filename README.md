@@ -6,6 +6,12 @@
 
 aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/news/technical-debt-40-jahre-arbeit-und-nichts-als-technische-schulden-2306-175091.html)
 
+## Links
+
+- [https://www.fermyon.com/blog/introducing-spin-v1](https://www.fermyon.com/blog/introducing-spin-v1)
+- [WebAssembly (Wasm): Past, Present, Future | Eröffnungs-Keynote BASTA! Spring 2023 in Frankfurt](https://yewtu.be/watch?v=0Bh_YcUWsiM)
+- [Writing Server Side WebAssembly with Python | Complete Guide to Spin](https://yewtu.be/watch?v=neAnYfIcNLE)
+
 ## Wasm
 
 ---
@@ -13,7 +19,7 @@ aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/n
 - Resource utilization, With same compute power, more applications could be executed
 - Speed, Wasm modules are boostrapped in no-time and fast at runtime
 - Security, Wasm modules are isolated (sandbox) and have dedicated permissions
-- Size, Wasm is super small compared to containers or VMs
+- Size, Wasm is tiny compared to containers or VMs
 
 ---
 
@@ -38,12 +44,6 @@ aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/n
 - `spin.toml`, Spin app Manifest
 
 ---
-
-## Links
-
-- [https://www.fermyon.com/blog/introducing-spin-v1](https://www.fermyon.com/blog/introducing-spin-v1)
-- [WebAssembly (Wasm): Past, Present, Future | Eröffnungs-Keynote BASTA! Spring 2023 in Frankfurt](https://yewtu.be/watch?v=0Bh_YcUWsiM)
-- [Writing Server Side WebAssembly with Python | Complete Guide to Spin](https://yewtu.be/watch?v=neAnYfIcNLE)
 
 ## Download and Install Spin
 
@@ -89,14 +89,28 @@ cd wasm-py-demo
 spin build
 ```
 
-## Run Apllication
+## Run Application
 
 ```shell
 spin up
+```
+
+## Login to Fermyon
+
+```shell
+spin login
 ```
 
 ## Deploy Application on Fermyon Cloud
 
 ```shell
 spin deploy
+```
+
+## Load tester
+
+Downlod [here](https://hey-release.s3.us-east-2.amazonaws.com/hey_windows_amd64), rename to `.exe` and use.
+
+```shell
+ hey -n 20 -n 1000 https://stock-app-nydv3p97.fermyon.app
 ```
