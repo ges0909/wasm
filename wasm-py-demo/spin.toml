@@ -1,17 +1,17 @@
 spin_manifest_version = "1"
 authors = ["Gerrit Schrader <gerrit.schrader@gmail.com>"]
 description = "Serverless Webassembly showcase for Valantic STI monthly meeting"
-name = "monthly-meeting-wasm-demo"
+name = "wasm-demo-app"
 trigger = { type = "http", base = "/" }
 version = "0.1.0"
 
 [[component]]
-id = "wasm-demo"        # component name
-source = "app.wasm"     # WebAssembly module associated to component
+id = "wasm-demo-app"        # component name
+source = "demo_app.wasm"     # WebAssembly module associated to component
 
 [component.trigger]
 route = "/..."          # component's wildcard route
 
 [component.build]
-command = "spin py2wasm app -o app.wasm"
-watch = ["app.py", "Pipfile"]
+command = "spin py2wasm demo_app -o demo_app.wasm"
+watch = ["demo_app.py", "Pipfile"]

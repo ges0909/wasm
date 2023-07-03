@@ -2,4 +2,4 @@
 GET  http://127.0.0.1:3000
 
 ###
-GET https://monthly-meeting-wasm-demo-hhn6ynf8.fermyon.app
+GET https://wasm-demo-app-zfgjg8mg.fermyon.app
