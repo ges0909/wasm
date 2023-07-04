@@ -45,6 +45,16 @@ aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/n
 
 ---
 
+## Serverless
+
+- Serverless = Function as a Service (FaaS)
+
+---
+
+- AWS Lambda
+- Azure Functions
+- Google Cloud Functions
+
 ## Download and Install Spin
 
 - [Download](https://github.com/fermyon/spin/releases/download/v1.3.0/spin-v1.3.0-windows-amd64.zip)
