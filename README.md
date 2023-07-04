@@ -2,9 +2,9 @@
 
 ## Motivation
 
-> Ich prophezeie, dass WebAssembly die heutige Front-End-Entwicklung irgendwann überholen wird und eine ganz neue Welt entstehen wird.
-
-aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/news/technical-debt-40-jahre-arbeit-und-nichts-als-technische-schulden-2306-175091.html)
+> _Ich prophezeie, dass WebAssembly die heutige Front-End-Entwicklung irgendwann überholen wird und eine ganz neue Welt entstehen wird._
+> 
+> -- Matt Wattson, [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/news/technical-debt-40-jahre-arbeit-und-nichts-als-technische-schulden-2306-175091.html)
 
 ## Links
 
@@ -16,17 +16,16 @@ aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/n
 
 ---
 
-- Resource utilization, With same compute power, more applications could be executed
-- Speed, Wasm modules are boostrapped in no-time and fast at runtime
-- Security, Wasm modules are isolated (sandbox) and have dedicated permissions
-- Size, Wasm is tiny compared to containers or VMs
+- **Resource utilization**, With same compute power, more applications could be executed
+- **Speed**, Wasm modules are boostrapped in no-time and fast at runtime
+- **Security**, Wasm modules are isolated (sandbox) and have dedicated permissions
+- **Size**, Wasm is tiny compared to containers or VMs
 
 ---
 
-- WASI, WebAssembly System Interface, Spec only
-- Provides system calls to Wasm modules
-- Platform-agnostic, Wasm application could run om any WASI-compliant platform
-- Designed to provide only essential system calls
+- **WASI**, WebAssembly System Interface, Spec only
+- **Platform-agnostic**, Wasm application could run on any WASI-compliant platform
+- Designed to provide only essential system calls to Wasm modules
 
 ---
 
@@ -55,72 +54,82 @@ aus: [20 Jahre Arbeit und nichts als technische Schulden](https://www.golem.de/n
 - Azure Functions
 - Google Cloud Functions
 
-## Download and Install Spin
+## Spin 
 
-- [Download](https://github.com/fermyon/spin/releases/download/v1.3.0/spin-v1.3.0-windows-amd64.zip)
-- [Install](https://developer.fermyon.com/spin/quickstart#install-spin)
+Download and Install Spin.
 
-## Spin Commands
+1. [Download](https://github.com/fermyon/spin/releases/download/v1.3.0/spin-v1.3.0-windows-amd64.zip)
+1. [Install](https://developer.fermyon.com/spin/quickstart#install-spin)
+
+
+Show installed templates.
 
 ```shell
 spin template list
 ```
 
-## Install Python Template
+```shell
+spin plugins update
+```
+
+Install Python plugin to compile Python module with all its dependencies to produce
+Spin-compatible WebAssembly module.
+
+
+```shell
+spin plugin install py2wasm --yes
+```
+
+Install "Python HTTP Request Handler" Template.
+
 
 ```shell
 spin templates install --git https://github.com/fermyon/spin-python-sdk --update
 ```
 
-## Install Tools
-
 ```shell
-spin plugins update
-```
-
-Install the Python plugin to convert Python applications to Spin compatible modules.
-
-```shell
-spin plugin install py2wasm --yes
 spin plugin install cloud --yes
 ```
 
-## Create an Application
+Create Application.
+
 
 ```shell
-spin new
+spin new [ --accept-defaults ] http-py hello
 tree
-```
 
-## Build Application
+
+Build Application.
+
 
 ```shell
 cd wasm-py-demo
 spin build
 ```
 
-## Run Application
+Run Application.
+
 
 ```shell
 spin up
 ```
 
-## Login to Fermyon
+Login to Fermyon.
+
 
 ```shell
 spin login
 ```
 
-## Deploy Application on Fermyon Cloud
+Deploy to Fermyon Cloud.
+
 
 ```shell
 spin deploy
 ```
 
-## Load tester
+## Install load tester Hey
 
-Downlod [here](https://hey-release.s3.us-east-2.amazonaws.com/hey_windows_amd64), rename to `.exe` and use.
-
-```shell
- hey -n 20 -n 1000 https://stock-app-nydv3p97.fermyon.app
-```
+- download [here](https://hey-release.s3.us-east-2.amazonaws.com/hey_windows_amd64)
+- rename to `hey.exe`
+- add path to `PATH`.
