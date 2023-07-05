@@ -17,8 +17,13 @@
 
 ---
 
+- Virtual **binary** instruction format, compiled from different source languages
+- **Web** = supported by all major browsers, **Assembly** seems to be something like the good-old assembler
+
+---
+
 - **Resource utilization**, With same compute power, more applications could be executed
-- **Speed**, Wasm modules are boostrapped in no-time and fast at runtime
+- **Speed**, Wasm modules are bootstrapped in no-time and fast at runtime
 - **Security**, Wasm modules are isolated (sandbox) and have dedicated permissions
 - **Size**, Wasm is tiny compared to containers or VMs
 
@@ -30,7 +35,7 @@
 
 ---
 
-- Wasi runtime, Delegtes system calls to system, Thin layer
+- Wasi runtime, Delegates system calls to system, Thin layer
 
 ---
 
@@ -98,7 +103,7 @@ Create Application.
 ```shell
 spin new [ --accept-defaults ] http-py hello
 tree
-
+```
 
 Build Application.
 
