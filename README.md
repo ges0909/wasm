@@ -11,6 +11,7 @@
 - [https://www.fermyon.com/blog/introducing-spin-v1](https://www.fermyon.com/blog/introducing-spin-v1)
 - [WebAssembly (Wasm): Past, Present, Future | Eröffnungs-Keynote BASTA! Spring 2023 in Frankfurt](https://yewtu.be/watch?v=0Bh_YcUWsiM)
 - [Writing Server Side WebAssembly with Python | Complete Guide to Spin](https://yewtu.be/watch?v=neAnYfIcNLE)
+- [https://wasmlabs.dev/articles/docker-without-containers/](https://wasmlabs.dev/articles/docker-without-containers/)
 
 ## Wasm
 

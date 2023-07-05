@@ -11,7 +11,6 @@ from os import environ
 # module by the `py2wasm` plugin.
 #
 def handle_request(request: Request) -> Response:
-
     url = environ["URL"]
     print(f">> environ['URL'] = {url}\n")
 

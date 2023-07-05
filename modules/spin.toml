@@ -7,20 +7,29 @@ version = "0.1.0"
 
 [[component]]
 id = "simple"
-source = "simple.wasm"
+source = "wasm/simple.wasm"
 environment = { URL = "https://raw.githubusercontent.com/fermyon/spin/main/Cargo.toml" }
 [component.trigger]
 route = "/simple"
 [component.build]
-command = "spin py2wasm simple -o simple.wasm"
+command = "spin py2wasm simple -o wasm/simple.wasm"
 watch = ["simple.py", "Pipfile"]
 
 [[component]]
 id = "outbound"
-source = "outbound.wasm"
+source = "wasm/outbound.wasm"
 allowed_http_hosts = ["demo-xtzjs1xt.fermyon.app"]
 [component.trigger]
 route = "/outbound"
 [component.build]
-command = "spin py2wasm outbound -o outbound.wasm"
+command = "spin py2wasm outbound -o wasm/outbound.wasm"
 watch = ["outbound.py", "Pipfile"]
+
+[[component]]
+id = "info"
+source = "wasm/info.wasm"
+[component.trigger]
+route = "/info"
+[component.build]
+command = "spin py2wasm info -o wasm/info.wasm"
+watch = ["info.py", "Pipfile"]
